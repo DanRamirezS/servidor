@@ -8,9 +8,47 @@
                 
 </head>
 <body>
-	<h1>PAGINA.</h1>
-	<h3>Por mi, mi nombre, mio.</h3>
-	<h2>editando :)</h2>
+	<h1>PRACTICA DE SUMAR DOS NUMEROS</h1>
+
+	<form name="registro">
+	<table>
+		<tr>
+			<tr><td>Numero: </td>
+			<td><input type="text" name="dato1" id="dato1"></td></tr>
+			<tr><td>Numero: </td>
+			<td><input type="text" name="dato2" id="dato2"></td></tr>
+		</tr>
+		<td>OPERACION </td>
+		<td><input type="button" name="Enviar" value="+" onclick="sumadedatos()">
+		<input type="button" name="Enviar" value="-" onclick="restadedatos()">
+		<input type="button" name="Enviar" value="x" onclick="multiplicaciondedatos()"></td>
+	</table>
+	<table>
+		<tr>
+			<td><strong>RESULTADO</strong></td>
+			<td><input type="text" name="eve" id="eve"></td>
+		</tr>
+
+	</table>
+	</form>
+
+	<script type="text/javascript">
+		function sumadedatos(){
+			var d1=parseInt(document.getElementById('dato1').value);
+			var d2=parseInt(document.getElementById('dato2').value);
+			document.registro.eve.value=d1+d2;
+		}
+		function restadedatos(){
+			var d1=parseInt(document.getElementById('dato1').value);
+			var d2=parseInt(document.getElementById('dato2').value);
+			document.registro.eve.value=d1-d2;
+		}
+		function multiplicaciondedatos(){
+			var d1=parseInt(document.getElementById('dato1').value);
+			var d2=parseInt(document.getElementById('dato2').value);
+			document.registro.eve.value=d1*d2;
+		}
+	</script>
 
 </body>
 </html>
